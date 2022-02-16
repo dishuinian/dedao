@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in goodList">
+                {{item.name}}-------------{{item.price | format | addRMB}}
+            </li>
+        </ul>
+        <p :title="count|format">查看标题</p>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                goodList:[
+                    { "id": 1, "name": "杯子", "price": 46 },
+					{ "id": 2, "name": "铅笔", "price": 3 },
+					{ "id": 3, "name": "白纸", "price": 86000 }
+                ],
+                count:3000
+            },
+            methods:{},
+            filters:{
+                /* 超过10000的将0000改为万 */
+                Format(val){
+                    if(val > 1000){
+                        return val/10000 + '万'
+                    }
+                    return val
+                },
+                addRMB(val){
+                    console.log(val);
+                    return '￥' + val
+                }
+            }
+        })
+    </script>
+</body>
+</html>

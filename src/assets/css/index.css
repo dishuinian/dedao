@@ -1,0 +1,165 @@
+html{
+    font-size: 7.5rem;
+    background-color: #f9f9f9;
+    font-family: tahoma,"microsoft yahei","\5FAE\8F6F\96C5\9ED1"!important;
+}
+ul,li{
+    list-style: none;
+}
+.header{
+    width: 7.5rem;
+    height: .78rem;
+    text-align: center;
+    line-height: .78rem;
+    background-color: #fff;
+}
+.header h1{
+    font-size: .28rem;
+    color: #1c1c1c;
+}
+
+/* 搜索栏 */
+.search{
+    width: 7.04rem;
+    height: .78rem;
+    margin: .14rem .28rem .24rem;
+    
+    position: relative;
+    color: #a0a2a1;
+}
+.search input{
+    border: 1px solid #e8e8e8;
+    margin-top: .12rem;
+    width: 7.04rem;
+    height: .78rem;
+    border-radius: .1rem;
+    font-family: "microsoft yahei";
+}
+.search input::placeholder{
+    text-indent: .65rem;
+    color: #a0a2a1;
+    font-family: "microsoft yahei";
+
+}
+.searchimg{
+    position: absolute;
+    width: .3rem;
+    height: .3rem;
+    left: .17rem;
+    top:0.31rem;
+}
+
+/* banner */
+.banner{
+    width: 7.2rem;
+    height: 2.4rem;
+    
+    margin: 0 auto;
+}
+.banner img{
+    width: 100%;
+    border-radius: .12rem;
+}
+/* indexnav */
+.indexNav{
+    width: 7.5rem;
+    height: 1.96rem;
+    background-color: #fff;
+
+}
+.indexNav ul,.indexNav li{
+    list-style: none;
+}
+.indexNav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.indexNav ul li{
+    height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    color: #2a2a2a;
+}
+.indexNav ul li img{
+    width: 100%;
+}
+.indexNav ul li p{
+    font-size: .22rem;
+}
+
+/* 商品列表 */
+.newGoods h1{
+    color: #535353;
+    font-size: .3rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .25rem;
+    font-weight: 600;
+    background-color: #fff;
+}
+.newGoods ul{
+    width: 7.2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: #f8f8f8;
+    padding: .15rem;
+}
+.newGoods ul li{
+    width: 2.2rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    background-color: #fff;
+}
+.newGoods ul li img{
+    width: 100%;
+}
+.newGoods ul li .bookName{
+    margin: .22rem auto .2rem;
+    font-size: .25rem;
+}
+.newGoods ul li .sell{
+    width: 1.05rem;
+    height: .5rem;
+    line-height: .5rem;
+    color: #fff;
+    background-color: #ff5e15;
+    font-size: .22rem;
+    padding: .06rem;
+    border-radius: .06rem;
+}
+.newGoods ul li .sellPrice{
+    font-size: .26rem;
+    color: #ff5e15;
+    
+}
+.newGoods ul li .oldPrice{
+    font-size: .18rem;
+    color: #cdced0;
+}
+.price{
+    margin: .21rem auto;
+}
+/* footer */
+.footer{
+    width: 7.5rem;
+    height:.9rem;
+    
+}
+.footer ul{
+    width: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.footer ul li{
+    color: #555555;
+    font-size: .18rem;
+    text-align: center;
+}
+.footer ul li.active{
+    color: #ff4445;
+}

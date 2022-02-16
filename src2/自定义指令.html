@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+			width: 200px;
+			height: 200px;
+			background-color: rgb(240, 91, 23);
+		}
+    </style>
+</head>
+<body>
+    <div id="app">
+       <p><input type="text" v-model = "user" v-focus></p>
+       <p>{{user}}</p>
+       <p class="box" v-color="'#0f4'">应用自定义指令的元素</p>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+               user:'',
+               posY:300
+            },
+            methods:{},
+            directives:{
+                focus:{
+                    //el指令所绑定的元素，可利用它直接操作 DOM
+                    inserted:function (el) {
+                        console.log(el);
+                        el.focus()
+                    }
+                },
+                color:{
+                    //绑定对象
+                    inserted(el,binding){
+                        console.log(el);
+                        el.style.backgroundColor = binding.value
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

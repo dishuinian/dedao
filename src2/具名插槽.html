@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>
+          <button @click='closeBox'>显示窗口</button>
+        </p>
+        <v-dialog v-if="isShow" @close="close">
+            <template v-slot:title>
+                消息提示
+            </template>
+            <template v-slot:content>
+                <p>你确定要删除该商品吗</p>
+                <p>
+                    <button>确认</button><button>取消</button>
+                </p>
+            </template>
+            
+        </v-dialog>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        const VDialog={
+            template:`
+                <div class="dialog">
+                    <div class="box">
+                        <slot name="title"></slot>
+                        <p><button @click = 'closeBox'>关闭窗口</button></p>
+                        <slot name='content'></slot>
+                    </div>
+                </div>
+            `,
+            methods:{
+                closeBox(){
+                    this.$emit("close")
+                }
+            }
+        }
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                isShow:false
+            },
+            components:{
+                VDialog
+            },
+            methods:{
+                closeBox(){
+                    this.isShow = !this.isShow
+                }
+            }
+            
+        })
+    </script>
+</body>
+</html>

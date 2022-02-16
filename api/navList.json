@@ -1,0 +1,24 @@
+{
+  "navList":[
+    {
+        "id": 1,
+        "name":"all",
+        "title":"全部"
+    },
+    {
+        "id": 2,
+        "name":"reader",
+        "title":"阅读器"
+    },
+    {
+        "id": 3,
+        "name":"paperBook",
+        "title":"图书"
+    },
+    {
+        "id": 4,
+        "name":"aroundGoods",
+        "title":"周边"
+    }
+  ]
+}

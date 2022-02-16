@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+            <!-- 正在进行 -->
+        <div :list="pending">
+            <template v-slot:header>
+                header的内容
+            </template>
+            <template v-slot:footer>
+                footer的内容
+            </template>
+            
+            <!-- 任何没有被包裹在带有 v-slot 的 <template> 中的内容都会被视为默认插槽的内容。-->
+            <h1>我是默认的</h1>
+        </div>
+        
+        
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        const cpn={
+            template:`
+            <div class="box">
+                <!-- 有名字的插槽-->
+                <slot name="header">wefrgtr</slot>
+                <hr>
+                <!-- 默认插槽-->
+                <slot></slot>
+                <ul>
+                    <li v-for="(item,index) in list">{{item}}</li>
+                </ul>
+                <!-- 有名字的插槽-->
+                <slot name="footer"></slot>
+            </div>
+            `,
+            props:{list:Array},
+            methods:{
+                
+            }
+        }
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                Array:[1,2,3,4,5,5,6],
+                pending:[1,2,3,4,5]
+            },
+            components:{
+                cpn
+            },
+            methods:{
+                
+            }
+            
+        })
+    </script>
+</body>
+</html>
