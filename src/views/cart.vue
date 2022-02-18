@@ -1,7 +1,9 @@
 <template>
   <div class="cart">
     <top-header></top-header>
+    <nologin></nologin>
     <!-- 没有添加商品时显示 -->
+    <!-- <button  @click="gopage">去登陆</button> -->
     <div class="empty" v-if="isEmpty">
       <img src="../assets/img/cart.jpg" />
       <div class="msg">
@@ -48,16 +50,22 @@
 
 <script>
 import CopyRight from "../components/common/copyRight.vue";
+import Nologin from '../components/common/nologin.vue';
 import TopHeader from "../components/common/topHeader.vue";
 import vfooter from "../components/common/vfooter.vue";
 export default {
-  components: { vfooter, CopyRight, TopHeader },
+  components: { vfooter, CopyRight, TopHeader,Nologin},
   data() {
     return {
       isEmpty: true,
       ShopingList: [],
     };
   },
+  methods:{
+    gopage(){
+      this.$router.push('/login')
+    }
+  }
 };
 </script>
 

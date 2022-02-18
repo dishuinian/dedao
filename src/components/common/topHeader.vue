@@ -13,9 +13,9 @@ export default {
 <style lang="scss" scoped>
 .header{
     width: 7.5rem;
-    height: .78rem;
+    height: .88rem;
     text-align: center;
-    line-height: .78rem;
+    line-height: .88rem;
     background-color: #fff;
     h1{
         font-size: .28rem;

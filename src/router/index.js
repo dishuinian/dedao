@@ -11,6 +11,7 @@ import paperBook from '../views/paperBook.vue'
 import reader from '../views/reader.vue'
 import hotRecommend from '../views/hotRecommend.vue'
 import allGoods from '../views/allGoods.vue'
+import login from '../views/login.vue'
 
 
 //引入首页中的二级路由组件
@@ -37,6 +38,10 @@ const routes = [
   {
     path:'/my',
     component:my
+  },
+  {
+    path:'/login',
+    component:login
   },
   {
     path:'/wonderfulGoods',
