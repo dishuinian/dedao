@@ -37,7 +37,11 @@ const routes = [
   },
   {
     path:'/my',
-    component:my
+    component:my,
+    meta:{
+      auth:true,
+      title:'我的'
+    }
   },
   {
     path:'/login',
@@ -67,9 +71,33 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: process.env.BASE_URL,
   routes
+})
+
+// 路由前置守卫
+router.beforeEach((to,from,next)=>{
+  document.title = to.meta.title
+
+  // 身份验证
+  let token = localStorage.getItem("token")
+  let auth = to.meta.auth
+
+  if(auth){
+    if(token){
+      next()
+    }else{
+      next({
+        path:'/login',
+        query:{
+          redirectUrl:to.fullPath
+        }
+      })
+    }
+  }else{
+    next()
+  }
 })
 
 export default router

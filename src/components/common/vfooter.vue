@@ -42,7 +42,8 @@ export default {};
   width: 7.5rem;
   height: 0.9rem;
   position: fixed;
-  left: 0;
+  // left: 0;
+  margin: 0 auto;
   bottom: 0;
   background-color: #fcfcfc;
   border-bottom: 1px solid #d0d0d0;
@@ -55,6 +56,12 @@ export default {};
       color: #555555;
       font-size: 0.18rem;
       text-align: center;
+      i {
+        font-size: 0.46rem;
+      }
+      p {
+        font-size: 0.24rem;
+      }
       .icon1 {
         display: inline-block;
       }
@@ -65,11 +72,17 @@ export default {};
   }
   .router-link-active li {
     color: #ff4445;
+    i {
+      font-size: 0.46rem;
+    }
+    p {
+      font-size: 0.24rem;
+    }
     .icon1 {
-        display: none;
+      display: none;
     }
     .icon2 {
-        display: inline-block;
+      display: inline-block;
     }
   }
 }

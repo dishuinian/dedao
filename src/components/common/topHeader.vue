@@ -21,5 +21,6 @@ export default {
         font-size: .28rem;
         color: #1c1c1c;
     }
+    border-bottom: .01rem solid #eee;
 }
 </style>

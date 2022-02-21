@@ -6,6 +6,8 @@ import axios from 'axios'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 //import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+import './vantui'
+
 Vue.prototype.$axios = axios;
 Vue.use(VueAwesomeSwiper);
 Vue.prototype.$axios = axios;

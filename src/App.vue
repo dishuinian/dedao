@@ -9,7 +9,7 @@ export default{};
 </script>
 <style lang="scss">
 #app{
-  width:100%;
+  width:7.5rem;
   margin: 0 auto;
   overflow: hidden;
 }
